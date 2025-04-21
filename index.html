@@ -3,75 +3,426 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>PRACTICALS</title>
+    <title>Royal x</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>HEADING 1</h1>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, numquam
-      pariatur et totam eum dolorem unde. Cum quia laudantium aliquam. Ratione
-      magnam odit recusandae quaerat placeat fuga minima modi nihil. <br>Cum, rem.
-      Autem eius blanditiis animi, maxime odio ducimus alias repellendus
-      excepturi numquam rerum officia eveniet! Voluptatibus, beatae? Commodi
-      accusantium dolorum odio veritatis repellat cupiditate inventore tempore
-      praesentium possimus culpa. Nostrum repellat consectetur sint quas fugit
-      sunt repellendus quod laborum? <br>Sapiente dolorum aut impedit eaque dolores
-      possimus, modi tempore est laboriosam adipisci deserunt fugit in aliquid,
-      placeat ex perspiciatis debitis! In itaque dolorum quasi unde totam alias
-      quam delectus hic excepturi saepe, quis facilis repudiandae officia illum,
-      ea quos, quod velit quibusdam rerum aliquid ipsam veniam! <br>Accusantium
-      delectus et quisquam? Consequatur deserunt adipisci, sit repellendus,
-      exercitationem vitae quae voluptatem similique possimus recusandae debitis
-      suscipit, inventore ut rerum magnam qui omnis nobis voluptate sint sequi?
-      Libero ipsa aperiam pariatur sed voluptate.
-      <hr>
-    </p>
+    <header>
+      <nav>
+        <div class="flex justify-between items-center px-6 py-4">
+          <div>
+            <img src="Image/logo.png.png" alt="logo" />
+          </div>
+          <div>
+            <ul class="flex gap-6">
+              <li>Home</li>
+              <li>Category</li>
+              <li>Room</li>
+              <li>Pages</li>
+              <li>Blog</li>
+              <li>Restaurant</li>
+            </ul>
+          </div>
+          <div>
+            <button
+              class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-cover h-screen bg-center">
+        <img src="Image/hero-1.png.png" alt="hero-1" />
+      </div>
+      <div class="text-white font-bold font-serif pl-20">
+        <h2 class="text-xl">Luxury Hotel And Resturant</h2>
+        <p class="text-3xl">
+          Enjoy Your Dream Time with <br />Luxury Experience
+        </p>
+      </div>
+      <!-- Modal Backdrop -->
+      <div
+        id="bookingModal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+      >
+        <!-- Modal Content -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md relative"
+        >
+          <!-- Close Button -->
+          <button
+            onclick="toggleModal()"
+            class="absolute top-3 right-3 text-red-600 text-xl font-bold"
+          >
+            &times;
+          </button>
 
-    <ul>
-      <li>chibuzo</li>
-      <li>juliet</li>
-      <li>leo</li>
-    </ul>
+          <h2 class="text-xl font-semibold text-center mb-4">
+            Check Availability
+          </h2>
 
-    <img src="image/passport2.jpg" alt="passport2" />
-    <a href="About us.html" target="_blank">about us</a>
+          <form class="space-y-4">
+            <div>
+              <label class="block font-medium">Check in*</label>
+              <input
+                type="date"
+                class="w-full border rounded px-3 py-2 mt-1"
+                required
+              />
+            </div>
 
-    <form>
-      <label for="username">enter username</label>
-      <input type="text" id="username" name="username" placeholder="username" required>
-      <label for="email">enter email</label>
-      <input type="email" id="email" name="email" placeholder="email" required>
-      <label for="password">enter password</label>
-      <input type="password" id="password" name="password" placeholder="password" required>
-      <br><br>
+            <div>
+              <label class="block font-medium">Check Out*</label>
+              <input
+                type="date"
+                class="w-full border rounded px-3 py-2 mt-1"
+                required
+              />
+            </div>
 
-      <input type="radio" name="age" value="0-25" id="ist-option">
-      <label for="ist-option">0-25</label>
-      <input type="radio" name="age" value="25-50" id="2nd-option">
-      <label for="2nd-option">26-50</label>
-      <input type="radio" name="age" value="51+" id="3rd-option">
-      <label for="3rd-option">51+</label>
-      <br><br>
+            <div>
+              <label class="block font-medium">Room Type*</label>
+              <select class="w-full border rounded px-3 py-2 mt-1" required>
+                <option>Select</option>
+                <option>Single</option>
+                <option>Double</option>
+                <option>Suite</option>
+              </select>
+            </div>
 
-      <label for="questions">security questions</label>
-      <select name="questions" id="questions">
-        <option value="q1">what is your name?</option>
-        <option value="q2">what is your favourite color?</option>
-        <option value="q3">what is your favourite food</option>
-       
-      </select>
-      <br><br>
-      <label for="answer">security question answer</label>
-      <input type="answer" id="answer" name="answer">
+            <div>
+              <label class="block font-medium">Adults*</label>
+              <select class="w-full border rounded px-3 py-2 mt-1" required>
+                <option>Select</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3+</option>
+              </select>
+            </div>
 
-      <label for="bio">your bio</label><br>
-    <textarea name="bio" id="bio" cols="30" rows="10" placeholder="your bio....."></textarea>
-    <BR><BR></BR></BR>
+            <div>
+              <label class="block font-medium">Children*</label>
+              <select class="w-full border rounded px-3 py-2 mt-1" required>
+                <option>Select</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2+</option>
+              </select>
+            </div>
 
-    <input type="submit" value="SUBMIT">
-      
-    </form>
+            <button
+              onclick="toggleModal()"
+              class="bg-[#b58c52] text-white px-6 py-2 rounded hover:bg-[#9c743e]"
+            >
+              Book Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <section class="grid grid-cols-2">
+      <div class="mt-32 pl-10">
+        <img src="Image/about-three.png.png" alt="" />
+      </div>
+      <div class="mt-48 pr-10">
+        <h4>The Royalx Hotel</h4>
+        <h3 class="mt-8 font-bold font-serif text-3xl">
+          Where Elegance Meets Excellence
+        </h3>
+        <p class="mt-8 text-xl">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
+          doloremque, praesentium sint quas accusamus id, harum sapiente
+          temporibus reprehenderit aspernatur consequuntur ex sunt esse vel,
+          nesciunt nihil reiciendis quaerat iure. <br />
+          <br />
+          <br />Distinctio vero fugiat nulla rem nemo earum voluptates
+          cupiditate nisi, neque aliquam laboriosam odit fuga quasi accusamus
+          similique maxime iure obcaecati illum vel labore repudiandae deserunt
+          ea perferendis blanditiis. Veritatis.
+        </p>
+      </div>
+    </section>
+    <section class="mt-16 grid grid-cols-1 justify-items-center">
+      <h5 class="font-bold font-serif text-3xl">Our Best Rooms</h5>
+      <div class="grid grid-cols-3 gap-x-64 mt-8">
+        <img class="rounded-3xl" src="Image/box-hero-1.png.png" alt="" />
+        <img class="rounded-3xl" src="Image/box-hero-2.png.png" alt="" />
+        <img class="rounded-3xl" src="Image/box-hero-3.png.png" alt="" />
+      </div>
+    </section>
+    <script>
+      function toggleModal() {
+        const modal = document.getElementById("bookingModal");
+        modal.classList.toggle("hidden");
+      }
+    </script>
+    <!-- Modal Backdrop -->
+    <div
+      id="bookingModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <!-- Modal Content -->
+      <div class="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md relative">
+        <!-- Close Button -->
+        <button
+          onclick="toggleModal()"
+          class="absolute top-3 right-3 text-red-600 text-xl font-bold"
+        >
+          &times;
+        </button>
 
+        <h2 class="text-xl font-semibold text-center mb-4">
+          Check Availability
+        </h2>
+
+        <form class="space-y-4">
+          <div>
+            <label class="block font-medium">Check in*</label>
+            <input
+              type="date"
+              class="w-full border rounded px-3 py-2 mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium">Check Out*</label>
+            <input
+              type="date"
+              class="w-full border rounded px-3 py-2 mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium">Room Type*</label>
+            <select class="w-full border rounded px-3 py-2 mt-1" required>
+              <option>Select</option>
+              <option>Single</option>
+              <option>Double</option>
+              <option>Suite</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-medium">Adults*</label>
+            <select class="w-full border rounded px-3 py-2 mt-1" required>
+              <option>Select</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3+</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-medium">Children*</label>
+            <select class="w-full border rounded px-3 py-2 mt-1" required>
+              <option>Select</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2+</option>
+            </select>
+          </div>
+
+          <button
+            onclick="toggleModal()"
+            class="bg-[#b58c52] text-white px-6 py-2 rounded hover:bg-[#9c743e]"
+          >
+            Book Now
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal Backdrop -->
+    <div
+      id="bookingModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+    >
+      <!-- Modal Content -->
+      <div class="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md relative">
+        <!-- Close Button -->
+        <button
+          onclick="toggleModal()"
+          class="absolute top-3 right-3 text-red-600 text-xl font-bold"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-xl font-semibold text-center mb-4">
+          Check Availability
+        </h2>
+
+        <form class="space-y-4">
+          <div>
+            <label class="block font-medium">Check in*</label>
+            <input
+              type="date"
+              class="w-full border rounded px-3 py-2 mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium">Check Out*</label>
+            <input
+              type="date"
+              class="w-full border rounded px-3 py-2 mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium">Room Type*</label>
+            <select class="w-full border rounded px-3 py-2 mt-1" required>
+              <option>Select</option>
+              <option>Single</option>
+              <option>Double</option>
+              <option>Suite</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-medium">Adults*</label>
+            <select class="w-full border rounded px-3 py-2 mt-1" required>
+              <option>Select</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3+</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-medium">Children*</label>
+            <select class="w-full border rounded px-3 py-2 mt-1" required>
+              <option>Select</option>
+              <option>0</option>
+              <option>1</option>
+              <option>2+</option>
+            </select>
+          </div>
+
+          <div class="text-center pt-4">
+            <button
+              type="submit"
+              class="border border-black px-6 py-2 rounded hover:bg-gray-100"
+            >
+              Book Room
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function toggleModal() {
+        const modal = document.getElementById("bookingModal");
+        modal.classList.toggle("hidden");
+      }
+    </script>
   </body>
+  <footer class="bg-[#101311] text-white py-12 mt-8">
+    <div
+      class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-5 gap-10 text-sm"
+    >
+      <!-- Logo and Description -->
+      <div class="space-y-4 col-span-2">
+        <h1 class="text-2xl font-semibold text-[#b58c52]">
+          Royal<span class="text-white">X</span>
+        </h1>
+        <p class="text-gray-400">
+          Our hotel seamlessly blends timeless charm with modern amenities,
+          offering an unparalleled experience for travelers.
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              class="h-10"
+              alt="Google Play"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              class="h-10"
+              alt="App Store"
+          /></a>
+        </div>
+      </div>
+
+      <!-- Explore -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Explore</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>Restaurant</li>
+          <li>Spa & Beauty</li>
+          <li>Gym & Fitness</li>
+          <li>Rooms & Suites</li>
+          <li>Book Now</li>
+          <li>Events</li>
+        </ul>
+      </div>
+
+      <!-- City Branches -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">City Branches</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>Bharat</li>
+          <li>Mexico</li>
+          <li>Venezuela</li>
+          <li>Germany</li>
+          <li>Austrialia</li>
+          <li>California</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Contact</h3>
+        <ul class="space-y-2 text-gray-400">
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Car Rentals</li>
+          <li>FAQ</li>
+          <li>Privacy Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Address</h3>
+        <p class="text-gray-400">
+          987-A, Dudhivadar, Rajkot, Gujarat, Bharat - 360410.
+        </p>
+
+        <h3 class="text-lg font-semibold mt-6">Email</h3>
+        <p class="text-gray-400">example@rx-email.com</p>
+
+        <h3 class="text-lg font-semibold mt-6">Phone No</h3>
+        <p class="text-gray-400">+91(1234)(567)(890)</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div
+      class="mt-12 border-t border-gray-700 pt-6 px-4 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm"
+    >
+      <p>© 2024 Royalx, All Rights Reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="p-2 rounded bg-gray-800 hover:bg-gray-700"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="#" class="p-2 rounded bg-gray-800 hover:bg-gray-700"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="p-2 rounded bg-gray-800 hover:bg-gray-700"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="#" class="p-2 rounded bg-gray-800 hover:bg-gray-700"
+          ><i class="fas fa-times"></i
+        ></a>
+      </div>
+    </div>
+  </footer>
 </html>
